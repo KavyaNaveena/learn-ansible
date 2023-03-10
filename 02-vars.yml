@@ -3,7 +3,7 @@
   vars:
     URL: play.example.com
   tasks:
-    - name: Play level variable
+    - name: Print Play variable
       ansible.builtin.debug:
         msg: URL = {{ URL }}
 
@@ -25,3 +25,10 @@
           URL: task.example.com
       ansible.builtin.debug:
           msg: URL = {{ URL }}
+
+- name: Inventory Level Variables
+  hosts: all
+  tasks:
+    - name: Print Inventory level Variables
+      ansible.builtin.debug:
+        msg: URL = {{ URL }}
