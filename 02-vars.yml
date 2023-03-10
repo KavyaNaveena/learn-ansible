@@ -18,7 +18,7 @@
         msg: URL = {{ URL }}
 
 - name: Task level Variables
-  host: localhost
+  hosts: localhost
   tasks:
     - name: Print Task level Variables
       vars: ## These variables are accessed only in this task, next task on same play cannot access
