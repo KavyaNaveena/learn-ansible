@@ -6,3 +6,12 @@
     - name: Print Play Variable
       ansible.builtin.debug:
         msg: URL = {{ URL }}
+
+- name: Play variables from file
+  hosts: localhost
+  var_files:
+    - vars.yml
+  tasks:
+    - name: Print play variable from file
+      ansible.builtin.debug:
+        msg: URL = {{ URL }}
