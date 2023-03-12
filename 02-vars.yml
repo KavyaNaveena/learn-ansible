@@ -31,4 +31,4 @@
   tasks:
     - name: Print Inventory level Variables
       ansible.builtin.debug:
-        msg: URL = {{ URL }}
+        msg: "URL = {{ URL }}, Hostname of server = {{ ansible_hostname }}"
